@@ -6,6 +6,7 @@ import lk.ijse.gdse.HelloShoeShopManagementSystem.Enum.Gender;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.logging.Level;
 
 @Data
 @Entity
@@ -20,6 +21,13 @@ public class CustomerEntity {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
+    @Enumerated(EnumType.STRING)
+    private Level level;
+
     @Temporal(TemporalType.DATE)
     private Date joinDate;
+    private Integer totalPoint;
+
+    @Temporal(TemporalType.DATE)
+    private Date dob;
 }
