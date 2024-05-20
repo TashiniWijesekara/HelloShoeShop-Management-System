@@ -1,22 +1,24 @@
 package lk.ijse.gdse.HelloShoeShopManagementSystem.entity;
 
-
 import jakarta.persistence.*;
 import lk.ijse.gdse.HelloShoeShopManagementSystem.Enum.Gender;
+import lk.ijse.gdse.HelloShoeShopManagementSystem.Enum.Level;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
+import java.sql.Date;
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
-import java.util.logging.Level;
+
 
 @Data
 @Entity
 @Table(name = "customer")
+@RequiredArgsConstructor
 public class CustomerEntity {
 
     @Id
-    private  String cutomerId;
+    private  String customerId;
 
     private String customerName;
 
