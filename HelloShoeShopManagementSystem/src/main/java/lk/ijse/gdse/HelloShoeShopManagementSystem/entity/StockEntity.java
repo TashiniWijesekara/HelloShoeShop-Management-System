@@ -1,13 +1,14 @@
 package lk.ijse.gdse.HelloShoeShopManagementSystem.entity;
 
-
 import jakarta.persistence.*;
 
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Stock")
 public class StockEntity {
+
     @Id
     private String stockId;
 
@@ -19,4 +20,8 @@ public class StockEntity {
     @JoinColumn(name = "itemCode",nullable = false)
     private ItemEntity itemEntity;
     private Date supplierOrderDate;
+
+    @OneToMany(mappedBy = "stockEntity",cascade = CascadeType.ALL)
+    private List<StockSizeEntity> stockSizeEntities;
+
 }

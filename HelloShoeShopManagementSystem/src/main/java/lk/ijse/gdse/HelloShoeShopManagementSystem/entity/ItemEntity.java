@@ -1,12 +1,12 @@
 package lk.ijse.gdse.HelloShoeShopManagementSystem.entity;
 
-
 import jakarta.persistence.*;
 import lk.ijse.gdse.HelloShoeShopManagementSystem.Enum.Status;
 
 @Entity
 @Table(name = "Item")
 public class ItemEntity {
+
     @Id
     private String itemCode;
     private String itemDesc;
@@ -16,4 +16,8 @@ public class ItemEntity {
 
     @Enumerated(EnumType.STRING)
     private Status status;
+
+    @ManyToOne
+    @JoinColumn(name = "genderCode",nullable = false)
+    private GenderEntity genderEntity;
 }
