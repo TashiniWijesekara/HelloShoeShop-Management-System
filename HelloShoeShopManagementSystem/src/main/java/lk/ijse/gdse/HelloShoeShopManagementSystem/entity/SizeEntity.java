@@ -1,7 +1,6 @@
 package lk.ijse.gdse.HelloShoeShopManagementSystem.entity;
 
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity
@@ -15,3 +14,4 @@ public class SizeEntity {
     @OneToMany(mappedBy = "sizeEntity",cascade = CascadeType.ALL)
     private List<StockSizeEntity> stockSizeEntities;
 }
+

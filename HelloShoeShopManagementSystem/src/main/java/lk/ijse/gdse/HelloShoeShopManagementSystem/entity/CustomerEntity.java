@@ -19,7 +19,6 @@ public class CustomerEntity {
 
     @Id
     private  String customerId;
-
     private String customerName;
 
     @Enumerated(EnumType.STRING)
