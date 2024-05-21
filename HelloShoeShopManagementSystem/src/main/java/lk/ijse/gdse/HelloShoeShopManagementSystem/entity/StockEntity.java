@@ -1,0 +1,22 @@
+package lk.ijse.gdse.HelloShoeShopManagementSystem.entity;
+
+
+import jakarta.persistence.*;
+
+import java.sql.Date;
+
+@Entity
+@Table(name = "Stock")
+public class StockEntity {
+    @Id
+    private String stockId;
+
+    @ManyToOne
+    @JoinColumn(name = "supplierCode",nullable = false)
+    private SupplierEntity supplierEntity;
+
+    @ManyToOne
+    @JoinColumn(name = "itemCode",nullable = false)
+    private ItemEntity itemEntity;
+    private Date supplierOrderDate;
+}
